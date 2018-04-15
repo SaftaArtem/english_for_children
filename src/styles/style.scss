@@ -1,4 +1,73 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-h1 {
-  color: blueviolet;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  background: url("/src/img/header-bg.png") top center no-repeat fixed;
+}
+.navbar {
+  background: #1b5f76;
+  
+  a.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+  .search {
+    background: #fff;
+    position: relative;
+    width: 65%;
+    border-radius: 4px;
+    i.fa-map-marker {
+      color: #ff0000;
+      position: absolute;
+      top: 5px;
+      left: 7px;
+    }
+    .search-select {
+      border: none;
+      width: 40px;
+
+    }
+    .search-feild {
+      box-shadow: none;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+      background: transparent;
+    }
+    .search-button {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: -3px;
+      right: 0;
+      i {
+        color: #303139;
+        font-size: 14px;
+      }
+    }
+  }
+  .notice {
+    position: relative;
+    .notice-count {
+      position: absolute;
+      border: solid 1px #ff0000;
+      background: #ff0000;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 10px;
+      p {
+        text-align: center;
+        font-size: 10px;
+        color: white;
+      }
+    }
+    img.user {
+      margin-left: 10px;
+      width: 40px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
 }

@@ -4,11 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://use.fontawesome.com/9879921d1f.js"></script>
   <link rel="stylesheet" href="dist/main.css">
   <title>Document</title>
 </head>
 <body>
-  
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">SITE LOGO</a>
+      <form class="search">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <select class="search-select" name="" id="">
+          <option></option>
+          <option>Харьков</option>
+          <option>Киев</option>
+        </select>
+        <input class="search-feild" type="search" aria-label="Search">
+        <button class="search-button" type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+      <div class="notice justify-content-end">
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <div class="notice-count">
+          <p>4</p>
+        </div>
+        <img src="src/img/user.jpg" alt="user" class="user">
+      </div>
+    </div>
+  </nav>
   <script src="dist/main.js"></script>
 </body>
 </html>
