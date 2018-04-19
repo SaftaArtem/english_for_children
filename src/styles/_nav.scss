@@ -1,9 +1,13 @@
 .navbar {
   background: #1b5f76;
   
-  a.navbar-brand {
+  a.navbar-brand,
+  a.brand-mobile {
     font-family: 'Roboto', sans-serif;
     color: white;
+  }
+  a.brand-mobile {
+    display: none;
   }
   .search {
     background: #fff;
@@ -33,6 +37,7 @@
       border: none;
       background-color: transparent;
       position: absolute;
+      color: #1b5f76;
       top: -3px;
       right: 0;
       i {
