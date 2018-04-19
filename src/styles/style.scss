@@ -1,73 +1,130 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-body {
-  background: url("/src/img/header-bg.png") top center no-repeat fixed;
-}
-.navbar {
-  background: #1b5f76;
-  
-  a.navbar-brand {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-  }
-  .search {
-    background: #fff;
-    position: relative;
-    width: 65%;
-    border-radius: 4px;
-    i.fa-map-marker {
-      color: #ff0000;
-      position: absolute;
-      top: 5px;
-      left: 7px;
-    }
-    .search-select {
-      border: none;
-      width: 40px;
 
-    }
-    .search-feild {
-      box-shadow: none;
-      border-top: none;
-      border-bottom: none;
-      border-left: none;
-      border-right: none;
-      background: transparent;
-    }
-    .search-button {
-      border: none;
-      background-color: transparent;
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+@import "_nav";
+@import "_main";
+@import "_carousel";
+@import "_mobile";
+
+body {
+  background: url("/src/img/header-bg.png") #f2f2f2 top center no-repeat;
+  height: 3000px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-header,
+.main-slogan {
+  color: white;
+}
+
+.main-header {
+  font-size: 23px;
+}
+
+.main-slogan {
+  font-size: 10px;
+}
+
+.slider-item {
+  padding: 50px 15px 15px 15px;
+  background: #fff;
+  position: relative;
+
+  .classroom {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .fa-star-o {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #015398;
+  }
+
+  .slider-item-logo {
+    position: absolute;
+    padding: 15px;
+    background: #fff;
+    border-radius: 4px;
+    top: -15px;
+    left: 30px;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  label.container {
+    margin-top: 35px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+
+    input {
       position: absolute;
-      top: -3px;
-      right: 0;
-      i {
-        color: #303139;
-        font-size: 14px;
-      }
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      background-color: #eee;
+    }
+
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    input:checked ~ .checkmark {
+      background-color: #015398;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .checkmark:after {
+      left: 7px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
     }
   }
-  .notice {
+
+  .descr {
+    padding-bottom: 20px;
+    font-size: 10px;
+    border-bottom: solid 1px #000;
+  }
+
+  .location {
+    font-size: 15px;
+    display: inline-block;
+    width: 90px;
     position: relative;
-    .notice-count {
+    margin-left: 20px;
+
+    .fa-map-marker {
       position: absolute;
-      border: solid 1px #ff0000;
-      background: #ff0000;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      top: 0;
-      left: 10px;
-      p {
-        text-align: center;
-        font-size: 10px;
-        color: white;
-      }
-    }
-    img.user {
-      margin-left: 10px;
-      width: 40px;
-      height: auto;
-      border-radius: 50%;
+      color: #aaa;
+      left: -15px;
+      top: 2px;
     }
   }
 }

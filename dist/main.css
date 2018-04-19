@@ -6267,6 +6267,9 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
 
+body {
+  background: url("../src/img/header-bg.png") top center no-repeat fixed; }
+
 .navbar {
   background: #1b5f76; }
   .navbar a.navbar-brand {
